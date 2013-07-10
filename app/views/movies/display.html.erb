@@ -1,0 +1,5 @@
+<ul>
+  <% @imovies.each do |imovie| %>
+    <li><a href="/movies/display/<%= imovie.id %>"><%= imovie.title %></a></li>
+  <% end %>
+</ul>
