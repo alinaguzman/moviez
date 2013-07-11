@@ -17,7 +17,19 @@ class MoviesController < ApplicationController
   end
 
   def display
-    @imovies = Imdb::Search.new(params[:title]).movies
+    @imovies = Imdb::Search.new(params[:title]).movies[0..9]
+
+  end
+
+  def add_fave
+    @imovie = Imdb::Movie.new(params[:movie_id])
+    movie = Movie.new
+    movie.name = @imovie.title
+    movie.year = @imovie.year
+    movie.plot = @imovie.plot
+    movie.mpaa_rating = @imovie.mpaa_rating
+    movie.save
+    redirect_to '/movies'
   end
 
   def individual
