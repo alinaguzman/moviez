@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130711014041) do
 
   create_table "actors", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
