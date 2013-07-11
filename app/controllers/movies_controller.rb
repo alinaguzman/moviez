@@ -22,9 +22,7 @@ class MoviesController < ApplicationController
     movie.mpaa_rating = @imovie.mpaa_rating
     movie.rating = 50
     @imovie.cast_members.slice(0,2).each do |actor|
-      new = Actor.new
-      new.name = actor
-      new.save
+      new = Actor.find_or_create_by_name(actor)
       movie.actors << new
     end
     movie.save
