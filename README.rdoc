@@ -14,6 +14,5 @@ each saved movie displays top 2 cast members also
 Features need to add:
 image of movie poster on individual pages
 limit rating score to 100
-stop duplication of actors and movies
 
 
