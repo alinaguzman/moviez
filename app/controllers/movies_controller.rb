@@ -3,15 +3,6 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
-  def search
-    movie = Movie.new
-    imovie = Imdb::Search.new(params[:name]).movies
-    movie.name = imovie.title
-    movie.plot = imovie.plot
-    movie.save
-    redirect_to "/movies/display/#{movie.name}"
-  end
-
   def show
     @movie = Movie.find(params[:id])
 
@@ -45,7 +36,7 @@ class MoviesController < ApplicationController
     movie.rating = params[:rating].to_i
     movie.rating += 30
     movie.save
-    redirect_to '/movies'
+    redirect_to movie
   end
 
   def vote_down
@@ -53,7 +44,7 @@ class MoviesController < ApplicationController
     movie.rating = params[:rating].to_i
     movie.rating -= 30
     movie.save
-    redirect_to '/movies'
+    redirect_to movie
   end
 
   def individual

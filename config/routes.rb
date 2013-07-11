@@ -1,6 +1,6 @@
 Moviez::Application.routes.draw do
   root :to => 'welcome#index'
-  get '/movies/search' => 'movies#search'
+  #get '/movies/search' => 'movies#search'
   get '/movies/display' => 'movies#display'
   get '/movies/display/:id' => 'movies#individual'
   resources :movies
