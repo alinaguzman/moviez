@@ -2,5 +2,11 @@
 <ul>
   <li>Name: <%= @movie.name %></li>
   <li>Plot: <%= @movie.plot %></li>
+  <li>Actors:</li>
+  <ul>
+    <% @movie.actors.each do |actor|%>
+    <li><%= actor.name %></li>
+    <% end %>
+  </ul>
 
 </ul>
