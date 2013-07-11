@@ -4,5 +4,11 @@
   <li><%= @movie.plot %></li>
   <li><%= @movie.year %></li>
   <li><%= @movie.mpaa_rating %></li>
+  <li>Actors:</li>
+  <ul>
+    <% @movie.cast_members.slice(0,2).each do |actor| %>
+        <li><%= actor %></li>
+    <% end %>
+  </ul>
 </ul>
 
