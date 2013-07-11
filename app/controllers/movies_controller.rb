@@ -29,12 +29,29 @@ class MoviesController < ApplicationController
     movie.year = @imovie.year
     movie.plot = @imovie.plot
     movie.mpaa_rating = @imovie.mpaa_rating
+    movie.rating = 50
     @imovie.cast_members.slice(0,2).each do |actor|
       new = Actor.new
       new.name = actor
       new.save
       movie.actors << new
     end
+    movie.save
+    redirect_to '/movies'
+  end
+
+  def vote_up
+    movie = Movie.find(params[:id])
+    movie.rating = params[:rating].to_i
+    movie.rating += 30
+    movie.save
+    redirect_to '/movies'
+  end
+
+  def vote_down
+    movie = Movie.find(params[:id])
+    movie.rating = params[:rating].to_i
+    movie.rating -= 30
     movie.save
     redirect_to '/movies'
   end

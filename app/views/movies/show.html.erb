@@ -2,6 +2,11 @@
 <ul>
   <li>Name: <%= @movie.name %></li>
   <li>Plot: <%= @movie.plot %></li>
+  <li>Rating: <%= @movie.rating %></li>
+  <%= button_to "Vote Up", vote_up_path(rating: @movie.rating) %>    <br />
+  <%= button_to "Vote Down", vote_down_path(rating: @movie.rating) %>
+
+
   <li>Actors:</li>
   <ul>
     <% @movie.actors.each do |actor|%>
