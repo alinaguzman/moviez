@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
   end
 
   def individual
-    @movie = Imdb::Search.new(params[:id]).movies.first
+    @movie = Imdb::Movie.new(params[:id])
   end
 
 end
