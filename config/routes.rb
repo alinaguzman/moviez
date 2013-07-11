@@ -1,10 +1,10 @@
 Moviez::Application.routes.draw do
   root :to => 'welcome#index'
-  #get '/movies/search' => 'movies#search'
   get '/movies/display' => 'movies#display'
   get '/movies/display/:id' => 'movies#individual'
   resources :movies
   post '/movies/display/add_fave' => 'movies#add_fave', as: 'add_movie_fave'
+  post '/movies/:id/remove' => 'movies#remove', as: 'remove'
   post '/movies/:id/vote_up' => 'movies#vote_up', as: 'vote_up'
   post '/movies/:id/vote_down' => 'movies#vote_down', as: 'vote_down'
 

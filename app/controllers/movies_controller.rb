@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
-
   end
 
   def display
@@ -26,6 +25,12 @@ class MoviesController < ApplicationController
       movie.actors << new
     end
     movie.save
+    redirect_to '/movies'
+  end
+
+  def remove
+    @movie = Movie.find(params[:movie_id])
+    @movie.destroy
     redirect_to '/movies'
   end
 
