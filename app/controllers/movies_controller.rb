@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
 
   end
 
-  def add_fave
+  def save
     @imovie = Imdb::Movie.new(params[:movie_id])
     movie = Movie.new
     movie.name = @imovie.title
@@ -26,6 +26,14 @@ class MoviesController < ApplicationController
     end
     movie.save
     redirect_to '/movies'
+
+  end
+
+  def add_fave
+    movie = Movie.find(params[:id])
+    movie.rating = 100
+    movie.save
+    redirect_to movie
   end
 
   def remove
@@ -37,7 +45,7 @@ class MoviesController < ApplicationController
   def vote_up
     movie = Movie.find(params[:id])
     movie.rating = params[:rating].to_i
-    movie.rating += 30
+    movie.rating += 10
     movie.save
     redirect_to movie
   end
@@ -45,7 +53,7 @@ class MoviesController < ApplicationController
   def vote_down
     movie = Movie.find(params[:id])
     movie.rating = params[:rating].to_i
-    movie.rating -= 30
+    movie.rating -= 10
     movie.save
     redirect_to movie
   end

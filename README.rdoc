@@ -3,6 +3,7 @@ imdb search
 imdb search display and individual display
 add movie from display to database
 saving this movie gives it a rating of 50 automatically
+favorite button makes rating 100
 remove movie from saved
 display all saved movies
 display each saved movie
@@ -10,10 +11,7 @@ buttons to vote up and down on each saved movie changes rating by 30
 each searched movie displays top 2 cast members
 each saved movie displays top 2 cast members also
 
-
-
 Features need to add:
-add a saved move feature! oops
 image of movie poster on individual pages
 limit rating score to 100
 

@@ -4,6 +4,7 @@
   <li>Plot: <%= @movie.plot %></li>
   <li>Rating: <%= @movie.rating %></li>
   <%= button_to "Remove", remove_path(movie_id: @movie.id) %>
+  <%= button_to "Favorite", add_movie_fave_path(rating: @movie.rating) %>
   <%= button_to "Vote Up", vote_up_path(rating: @movie.rating) %>
   <%= button_to "Vote Down", vote_down_path(rating: @movie.rating) %>
 
