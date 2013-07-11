@@ -6,6 +6,7 @@ Moviez::Application.routes.draw do
   resources :movies
   post '/movies/display/add_fave' => 'movies#add_fave', as: 'add_movie_fave'
   get '/movies' => 'movies#index', as: 'movies'
+  resources :actors
   get '/actors' => 'actors#index', as: 'actors'
   # The priority is based upon order of creation:
   # first created -> highest priority.
