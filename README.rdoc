@@ -11,6 +11,8 @@ buttons to vote up and down on each saved movie changes rating by 30
 each searched movie displays top 2 cast members
 each saved movie displays top 2 cast members also
 limit rating score to 100
+displays each actor and their associated movies
+delete actor from saved list
 
 
 Features need to add:

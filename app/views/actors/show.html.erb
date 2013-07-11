@@ -7,4 +7,6 @@
         <li><%= movie.name %></li>
     <% end %>
   </ul>
+   <%= button_to "Remove", remove_path(actor_id: @actor.id) %>
+
 </ul>

@@ -12,6 +12,8 @@ Moviez::Application.routes.draw do
   get '/movies' => 'movies#index', as: 'movies'
   resources :actors
   get '/actors' => 'actors#index', as: 'actors'
+  post '/actors/:id/remove' => 'actors#remove', as: 'remove'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
