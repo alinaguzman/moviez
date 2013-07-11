@@ -10,9 +10,10 @@ display each saved movie
 buttons to vote up and down on each saved movie changes rating by 30
 each searched movie displays top 2 cast members
 each saved movie displays top 2 cast members also
+limit rating score to 100
+
 
 Features need to add:
 image of movie poster on individual pages
-limit rating score to 100
 
 

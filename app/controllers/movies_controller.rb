@@ -45,7 +45,11 @@ class MoviesController < ApplicationController
   def vote_up
     movie = Movie.find(params[:id])
     movie.rating = params[:rating].to_i
-    movie.rating += 10
+    if movie.rating >= 100
+
+    else
+      movie.rating += 10
+    end
     movie.save
     redirect_to movie
   end

@@ -1,8 +1,5 @@
 <ul>
   <% @imovies.each do |imovie| %>
-    <li><a href="/movies/display/<%= imovie.id %>"><%= imovie.title %></a>
-      <%= button_to "Save Movie", save_path(movie_id: imovie.id) %>
-
-    </li>
+    <li><a href="/movies/display/<%= imovie.id %>"><%= imovie.title %></a><%= button_to "Save Movie", save_path(movie_id: imovie.id) %></li>
   <% end %>
 </ul>
