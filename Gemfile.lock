@@ -58,10 +58,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.3)
-    hpricot (0.8.6)
     i18n (0.6.1)
-    imdb (0.7.0)
-      hpricot (~> 0.8.6)
     journey (1.0.4)
     jquery-rails (3.0.2)
       railties (>= 3.0, < 5.0)
@@ -77,6 +74,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.7)
+    pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
     pry (0.9.12.2-x86-mingw32)
       coderay (~> 1.0.5)
@@ -151,9 +149,9 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
-  imdb
   jquery-rails
   meta_request
+  pg
   pry-debugger
   pry-rails
   pry-stack_explorer
